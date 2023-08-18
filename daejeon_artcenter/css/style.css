@@ -1,0 +1,468 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+@import url(./varoable.css);
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+/* reset */
+a{color: inherit;text-decoration: none;}
+li{list-style: none;}
+body{font-family:'Pretendard-Regular', sans-serif;color: #333;}
+/* common */
+.inner{width: 1300px;margin: 0 auto;
+  /* position: relative; */
+}
+.btn{
+  line-height: 25px; height: 25px;
+  border: 1px solid #707070;border-radius: 5px;font-size: 12px;transition: .5s;
+  box-sizing: border-box;padding:5px 25px 5px 20px;
+  background: url(../img/arrow_forward.png) no-repeat;
+  background-size: 12px; background-position: 85px,9px ;
+}
+.btn > span{ font-size: 10px; vertical-align:baseline; margin-left: 2px;}
+.btn__gray{display: block;text-align: center;line-height: 30px;background-color: #EEEAEA; width: 97px;height: 30px;border-radius: 5px;font-size: 12px;transition: .5s;}
+.btn__darkgray{display: block;text-align: center;line-height: 30px;background-color: #333;color: #FFF; width: 97px;height: 30px;border-radius: 5px;font-size: 12px;transition: .5s;}
+
+/* common hover */
+.btn:hover{background-color: #707070;color: #fff;border-color: #fff;font-weight: 700; text-decoration: underline;background-image: url(../img/arrow_forward_w.png);}
+.btn__gray:hover { 
+  text-decoration: underline; font-weight: 700;
+  background-color: #deb887;
+}
+.btn__darkgray:hover { 
+  text-decoration: underline; font-weight: 700;
+  background-color: #b8860b;
+}
+/* layout */
+
+/* header */
+header{width: 100%; top: 0;left: 0; position: fixed; 
+  background-color: rgba(0, 0, 0,.4);
+  /* background-color: #b8860b; */
+  ;z-index: 5;}
+header div.inner{display: flex;padding-top: 30px;padding-bottom: 33px;}
+header h1 img{width: 254px;height: 84px;}
+header nav{position: relative; width: 100%;height: 84px; display: flex;justify-content: center;}
+header nav ul.gnb{display: flex;height: 100%;align-items:flex-end;color: #fff;}
+header nav ul.gnb>li{height: 100%;}
+header nav ul.gnb> li> a{
+  padding-top: 60px;padding-bottom: 36px; 
+  box-sizing: border-box;
+  /* display: flex;align-items: end; */
+  display: block;
+  width: 100px;height: 100%;
+  text-align:center;
+}
+header nav ul.util{display: flex;position: absolute;right: 0;top: 0;color: #fff;}
+header nav ul.util > li{padding: 0 10px; }
+header nav ul.util > li:not(:first-child){border-left: 1px solid #fff ; }
+
+/* main */
+main{position: relative; width: 100%;height: 1080px;border: 1px solid transparent; background: url(../img/prugio_main_img.png) no-repeat center/cover;}
+/* main span{
+  display:block;
+  width: 100vw;height: 5px;background-color: #fff;margin-top: 300px;
+  margin-left: calc(-1*((100vw - 1300px) / 2));
+} */
+main section div.title{position: absolute;background-color: aqua;}
+main section span{
+  position: absolute; left: 0;top: 350px;
+  display:block;
+  width: 100vw;height: 5px;background-color: #fff;}
+
+main div.contents{
+  position: absolute;left: 0;top: 50%; 
+  width: 100%; z-index: 10; color: #fff;
+  transform: translateY(-50%);
+}
+main div.contents div.inner{display: flex;justify-content: center;position: relative;}
+main div.contents div.contents__title p{font-size: 90px;text-align: center;line-height: 1.2;}
+main div.contents div.contents__title p strong{font-weight: 800;}
+main div.contents div.contents__button{
+  height: 100%;
+  position: absolute; right: 0;
+  display: flex;flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;box-sizing: border-box;
+}
+main div.contents div.contents__button span{
+  display: inline-block;
+  width: 60px;height: 60px;border: 2px solid #fff;
+  border-radius: 50%;text-align: center;line-height: 60px;
+  font-size:32px ;cursor: pointer;
+}
+  /* inline-block일때는 enter를 사용하면 2~3px의 여백이 생긴다. flex-direction: column; 이어서 상관없음 */
+
+main div.contents >span{
+  position: absolute; width: 100%;height: 1px;
+  left: 0;top: 50%;margin-top: 0vh;
+  background-color: #fff;
+}
+main div.pagination{
+  position: absolute;bottom: 0vh;left: 0;
+  width: 100%; height: 40px;text-align: center;
+}
+main div.pagination span{
+  display: inline-block;width: 20px;height: 20px;
+  background-color: #fff; border-radius: 50%;
+  margin-left: 25px;cursor: pointer;
+}
+main div.pagination span:first-child{
+  margin-left: 0;width: 10px;height: 10px;
+  margin-bottom: 5px;
+}
+
+/* section */
+section{width: 100%;position: relative;}
+/* 높이 값을 안주려면 padding값을 조정해서 맞춰야한다. */
+
+/* beyond__contents */
+section.beyond__contents{ background-color: #c9ec9f; padding:77px 0 ;box-sizing: border-box;}
+section.beyond__contents div.inner{display: flex;justify-content: space-between;}
+section.beyond__contents span{ display: inline-block;width: 90px;height: 1px;background-color: #333;}
+section.beyond__contents div.beyond__contents__title{font-size: 30px; }
+section.beyond__contents div.beyond__contents__title p{margin-bottom: 40px;line-height: 1.5;font-weight: 700;color: #676767;}
+section.beyond__contents div.beyond__contents__subtext h1{font-size: 40px; font-weight: 700; line-height: 1.5;padding-right: 90px;}
+section.beyond__contents div.beyond__contents__subtext p{font-size: 18px;line-height: 1.5;padding-right: 90px;}
+section.beyond__contents div.beyond__contents__subtext h2{font-size: 40px; font-weight: 700; line-height: 1.5;padding-right: 90px; font-family: 'Playfair Display',serif; color: rgba(152, 152, 152, 0.5);}
+/* section performance_today */
+section.performance_today{width: 100%; position: relative;padding: 116px 0;background-color: #EEEAEA;}
+section.performance_today > span{position: absolute;font-size: 160px;top: -32px;left: 0; font-family: 'Playfair Display',serif;color: rgba(110, 110, 110, 0.07);letter-spacing: 20px;}
+/* z-index의 음수로 줄수있는 최대치는 -1이다. */
+section.performance_today div.todays{display: flex;}
+section.performance_today div.todays div.todays__title h2{font-size: 42px;width: 110px;}
+section.performance_today div.todays div.todays__title h2 + p{font-size: 26px;width: 120px;margin: 70px  0 46px 0;}  
+section.performance_today div.todays div.todays__title h2 + p + span{display: block; width: 45px;height: 4px;background-color: #333;}
+section.performance_today div.todays div.todays__title h2 + p ~ p{font-size: 12px;width: 140px;margin-top: 40px;line-height: 1.5;}
+
+/* 스크립트할때는 가상요소, 인접요소를 사용하면 깜박깜박하는 현상 발생 
+그래서 가상, 인접요소 사용하지말고 class명을 직접 주어야한다. */
+/* margin: 70px  0 46px 0;  -> 상 우 하  좌   ,  margin: 70px  0  0; -> 상  좌우  하*/
+
+section.performance_today div.todays div.todays__contents{padding-left: 60px;box-sizing: border-box;}
+section.performance_today div.todays div.todays__contents div.todays__contents__image{width: 640px;height: 380px;background:url(../img/1_9.png)no-repeat center/cover;color: #fff;}
+section.performance_today div.todays div.todays__contents div.todays__contents__image p{font-size: 32px;text-align: center;line-height: 380px;opacity: 0;transition: .5s}
+section.performance_today div.todays div.todays__contents div.todays__contents__image p:hover{opacity: 1;}  
+section.performance_today div.todays div.todays__contents div.todays__contents__text {padding-top: 40px;}
+section.performance_today div.todays div.todays__contents div.todays__contents__text p:first-child{font-size:28px ;font-weight: 700;margin-bottom: 22px;}
+section.performance_today div.todays div.todays__contents div.todays__contents__text p:first-child + p{font-size: 18px;margin-bottom: 35px;}
+
+
+/* section performance_reservation */
+section.performance_reservation{width: 100%; position: relative;padding: 100px 0;background-color: #d9d9d9;}
+
+section.performance_reservation div.reservation{display: flex;}
+section.performance_reservation div.reservation div.reservation__title h2{font-size: 42px;width: 110px;}
+section.performance_reservation div.reservation div.reservation__title h2 + p{width: 140px; font-size: 26px;margin: 70px  0 46px 0;}  
+section.performance_reservation div.reservation div.reservation__title h2 + p + span{display: block; width: 45px;height: 4px;background-color: #333;}
+section.performance_reservation div.reservation div.reservation__title div.button_group{margin-top: 40px;}
+section.performance_reservation div.reservation div.reservation__title 
+/* h2 + p + span + */ div.button_group a{
+  display: inline-block; width: 40px;height: 40px;text-align: center; line-height: 40px;border: 1px solid #333;border-radius: 8px;
+  box-sizing: border-box;
+}
+section.performance_reservation div.reservation div.reservation__title 
+/* h2 + p + span + */ div.button_group a:first-child{padding-left: 10px;margin-right: 8px;}
+
+section.performance_reservation div.reservation div.reservation__contents{
+  display: flex; gap: 70px;
+  width: 1102px;height: 520px;
+  padding: 70px 110px 70px;box-sizing: border-box;background-color: #FFF;margin-left: 58px;
+}
+section.performance_reservation div.reservation div.reservation__contents div.reservation__contents__image{
+  width: 420px;height: 380px;background:url(../img/ticket5.png)no-repeat center/cover;color: #fff;
+}
+section.performance_reservation div.reservation div.reservation__contents div.reservation__contents__image p{font-size: 32px;text-align: center;line-height: 380px;opacity: 0;transition: .5s}
+section.performance_reservation div.reservation div.reservation__contents div.reservation__contents__image p:hover{opacity: 1;}  
+section.performance_reservation div.reservation div.reservation__contents div.reservation__contents__text {padding-top: 40px;}
+section.performance_reservation div.reservation div.reservation__contents div.reservation__contents__text p:first-child{
+  font-size:28px ;font-weight: 700;margin-bottom: 22px;
+}
+section.performance_reservation div.reservation div.reservation__contents div.reservation__contents__text p:first-child + p{
+  font-size: 18px;margin-bottom: 35px;
+}
+
+
+/* section performance_reservation */
+section.performance_reservation {
+  width: 100%; position: relative; padding: 100px 0;
+  background-color: #d9d9d9;
+}
+section.performance_reservation div.reservation {
+  display: flex; 
+}
+section.performance_reservation div.reservation div.reservation__title h2 {
+  font-size: 42px; width: 110px;
+}
+section.performance_reservation div.reservation div.reservation__title h2 + p {
+  width: 140px;
+  font-size: 26px; margin: 70px 0 40px 0;
+}
+section.performance_reservation div.reservation div.reservation__title h2 + p + span {
+  display: block;
+  width: 45px; height: 4px; background-color: #333;
+}
+section.performance_reservation div.reservation div.reservation__title div.button_group {
+  margin-top: 40px;
+} 
+section.performance_reservation div.reservation div.reservation__title div.button_group a {
+  display: inline-block; 
+  width: 40px; height: 40px; text-align: center;
+  line-height: 40px; border: 1px solid #333;
+  border-radius: 8px; box-sizing: border-box;
+} 
+section.performance_reservation div.reservation div.reservation__title div.button_group a:first-child {
+  padding-left: 10px; margin-right: 8px;
+} 
+
+section.performance_reservation div.reservation div.reservation__contents {
+  display: flex; gap: 70px;
+  width: 1102px; height: 520px;
+  padding: 70px 110px 70px; box-sizing: border-box; 
+  background-color: #fff;
+  margin-left: 58px;
+} 
+section.performance_reservation div.reservation div.reservation__contents 
+div.reservation__contents__image {
+  width: 420px; height: 380px; color: #fff; 
+  background: url(../img/ticket1.jpg) no-repeat center/contain;
+  background-color: #999;
+} 
+section.performance_reservation div.reservation div.reservation__contents 
+div.reservation__contents__image p {
+  font-size: 32px; text-align: center; line-height: 380px;
+  opacity: 0; transition: .5s;
+} 
+section.performance_reservation div.reservation div.reservation__contents 
+div.reservation__contents__image:hover p { opacity: 1; } 
+section.performance_reservation div.reservation div.reservation__contents 
+div.reservation__contents__text { width: 324px; position: relative; } 
+section.performance_reservation div.reservation div.reservation__contents 
+div.reservation__contents__text h4 { 
+  font-size: 28px; line-height: 1.3; margin-bottom: 32px;
+  font-weight: 700;
+} 
+
+
+
+section.performance_reservation div.reservation div.reservation__contents 
+div.reservation__contents__text div.reservation_schedule p { 
+  line-height: 1.2; font-size: 16px;
+} 
+
+section.performance_reservation div.reservation div.reservation__contents 
+div.reservation__contents__text div.reservation_schedule p:not(:first-child) { 
+  margin-top: 10px;
+}
+section.performance_reservation div.reservation div.reservation__contents 
+div.reservation__contents__text div.reservation_schedule p strong { 
+  padding-right: 20px; font-weight: 600; border-right: 1px solid #333 ;
+  margin-right: 20px;
+}
+/* div.reservation__contents__text div.reservation_schedule p span { 
+  padding-left: 70px;
+} */
+
+
+
+
+section.performance_reservation div.reservation div.reservation__contents 
+div.reservation__contents__text div.reservation_button_group { 
+  display: flex; position: absolute; bottom: 0; left: 0;
+} 
+section.performance_reservation div.reservation div.reservation__contents 
+div.reservation__contents__text div.reservation_button_group a:first-child { margin-right: 8px; } 
+section.performance_reservation div.reservation div.reservation__contents 
+div.reservation__contents__text div.reservation_button_group a:last-child span { font-size: 14px; vertical-align: middle; margin-top: -1px; } 
+
+section.performance_reservation div.reservation_ticket { 
+  display: flex; justify-content: space-between;
+  width: 1102px; margin-left: 198px; margin-top: 62px;
+} 
+section.performance_reservation div.reservation_ticket > div { 
+  width: calc((100% - 60px) / 4); 
+} 
+section.performance_reservation div.reservation_ticket > div > div { 
+  height: 200px; 
+  background-position: center; background-size: cover;
+  background-repeat: no-repeat; background-color: #fff;
+} 
+section.performance_reservation div.reservation_ticket > div > h5 { 
+  margin: 26px 0 16px; font-size: 20px; font-weight: 600;
+} 
+section.performance_reservation div.reservation_ticket > div.reservation_ticket__one div { 
+ 
+  background-image: url(../img/ticker1.png) ;
+  background-size: 100% 100%;
+} 
+section.performance_reservation div.reservation_ticket > div.reservation_ticket__two div { 
+  background-image: url(../img/ticket2.png);
+  background-size: 100% 100%;
+} 
+section.performance_reservation div.reservation_ticket > div.reservation_ticket__three div { 
+  background-image: url(../img/ticket3.png);
+  background-size: 100% 100%;
+} 
+section.performance_reservation div.reservation_ticket > div.reservation_ticket__four div { 
+  background-image: url(../img/ticket4.png);
+  background-size: 100% 100%;
+} 
+
+
+/* section performance_reservation */
+section.performance_reservation{width: 100%; position: relative;padding: 100px 0;background-color: #d9d9d9;}
+
+section.performance_reservation div.reservation{display: flex;}
+section.performance_reservation div.reservation div.reservation__title h2{font-size: 42px;width: 110px;}
+section.performance_reservation div.reservation div.reservation__title h2 + p{width: 140px; font-size: 26px;margin: 70px  0 46px 0;}  
+section.performance_reservation div.reservation div.reservation__title h2 + p + span{display: block; width: 45px;height: 4px;background-color: #333;}
+section.performance_reservation div.reservation div.reservation__title div.button_group{margin-top: 40px;}
+section.performance_reservation div.reservation div.reservation__title 
+/* h2 + p + span + */ div.button_group a{
+  display: inline-block; width: 40px;height: 40px;text-align: center; line-height: 40px;border: 1px solid #333;border-radius: 8px;
+  box-sizing: border-box;
+}
+section.performance_reservation div.reservation div.reservation__title 
+/* h2 + p + span + */ div.button_group a:first-child{padding-left: 10px;margin-right: 8px;}
+
+section.performance_reservation div.reservation div.reservation__contents{
+  display: flex; gap: 70px;
+  width: 1102px;height: 520px;
+  padding: 70px 110px 70px;box-sizing: border-box;background-color: #FFF;margin-left: 58px;
+}
+section.performance_reservation div.reservation div.reservation__contents div.reservation__contents__image{
+  width: 420px;height: 380px;background:url(../img/perfomance_today_image.png)no-repeat center/cover;color: #fff;
+}
+section.performance_reservation div.reservation div.reservation__contents div.reservation__contents__image p{font-size: 32px;text-align: center;line-height: 380px;opacity: 0;transition: .5s}
+section.performance_reservation div.reservation div.reservation__contents div.reservation__contents__image p:hover{opacity: 1;}  
+section.performance_reservation div.reservation div.reservation__contents div.reservation__contents__text {padding-top: 40px;}
+section.performance_reservation div.reservation div.reservation__contents div.reservation__contents__text p:first-child{
+  font-size:28px ;font-weight: 700;margin-bottom: 22px;
+}
+section.performance_reservation div.reservation div.reservation__contents div.reservation__contents__text p:first-child + p{
+  font-size: 18px;margin-bottom: 35px;
+}
+
+
+/* section notice */
+section.notice {
+  width: 100%; position: relative; padding: 100px 0;
+  background-color: #fff;
+}
+section.notice div.inner {
+  display: flex; padding: 102px 0;
+}
+section.notice div.notice__title h2 {
+  font-size: 42px; width: 100px;
+}
+section.notice div.notice__title h2 + p {
+  width: 140px;
+  font-size: 26px; margin: 70px 0 40px 0;
+}
+section.notice div.notice__title h2 + p + span {
+  display: block;
+  width: 45px; height: 4px; background-color: #333;
+  margin-bottom: 40px;
+}
+section.notice div.notice__title h2 + p + span + p{width: 140px;}
+
+
+section.notice div.notice__contents {
+  width: 1102px; background-color: #fff;
+  margin-left: 58px;
+} 
+section.notice div.notice__contents div.notice__contents__news{
+  display: flex;gap: 20px; align-items: center;justify-content: space-between;
+  padding: 30px 0;
+  border-bottom: 1px solid #333;
+}
+section.notice div.notice__contents div.notice__contents__news:first-child{
+border-top: 1px solid #333;}
+section.notice div.notice__contents div.notice__contents__news div.title{width: 90px;}
+section.notice div.notice__contents div.notice__contents__news div.title p{font-size: 42px;}
+section.notice div.notice__contents div.notice__contents__news div.title span{font-size: 12px;}
+section.notice div.notice__contents div.notice__contents__news div + p{font-size: 20px;font-weight: 600; width: 882px;line-height: 1.5;}
+section.notice div.notice__contents div.notice__contents__news div + p + p{font-size:40px;  width:  90px; text-align: center;}
+/*   ~ : 형제요소  
+    + : 인접요소
+*/
+section.notice div.notice__contents div.notice__contents__news div + p span{font-size: 16px;font-weight: 400;}
+
+/* section overall__view */
+section.overall__view div.overall__view_box{
+  width: 50%;background-color: #7a8de9;height: 380px;position: absolute;left: 0;top: 0;z-index: -1;
+  background-position: top right;
+  background-size: 700px;
+  background-repeat: no-repeat;
+}
+section.overall__view div.overall__view_box:nth-child(1){
+  background-image: url(../img/over_view_left.png);
+}
+section.overall__view div.overall__view_box:nth-child(2){
+  background-image: url(../img/over_view_right.png);
+  background-position: 100px 0px; 
+  background-color:  #939393;left: 50%;
+}
+section.overall__view div.inner{color: #FFF;display: flex;gap: 30%;padding: 136px 0;}
+section.overall__view div.overall__view_left{width: 50%;}
+section.overall__view div.overall__view_left div.group{display: flex;align-items: center;}
+section.overall__view div.overall__view_left div.group h5{font-size: 42px;font-weight: 600;} 
+section.overall__view div.overall__view_left div.group span{
+  width: 38px;height: 38px;border: 2px solid #fff;
+  text-align: center;line-height: 38px;
+  border-radius: 50%;margin-left: 24px;
+}
+section.overall__view div.overall__view_left p{
+  width: 205px; margin-top: 18px;line-height: 1.5;
+}
+
+section.overall__view div.overall__view_right{width: 50%;}
+section.overall__view div.overall__view_right div.group{display: flex;align-items: center;}
+section.overall__view div.overall__view_right div.group h5{font-size: 42px;font-weight: 600;}
+section.overall__view div.overall__view_right div.group span{
+  width: 38px;height: 38px;border: 2px solid #fff;
+  text-align: center;line-height: 38px;
+  border-radius: 50%;margin-left: 24px;
+}
+section.overall__view div.overall__view_right p{
+  width: 205px; margin-top: 18px;line-height: 1.5;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+}
+
+/* footer */
+footer {
+  color: #fff; background-color: #000; height: 250px;
+  padding: 70px 0 90px 0; box-sizing: border-box;
+  font-size: 12px;
+}
+footer div.inner { display: flex; }
+footer h2 img { width: 200px; }
+footer address { 
+  width: 630px; padding-left: 130px; box-sizing: border-box;
+}
+footer address p { 
+  line-height: 1.5;
+}
+/* footer address p + hr { 
+  margin: 22px 0; border: none;
+  border-top: 1px solid #fff;
+} */
+footer div.footer_menu { 
+  display: flex; flex-direction: column; justify-content: space-between;
+  width: 700px; padding-left: 220px; box-sizing: border-box;
+}
+footer div.footer_menu ul { 
+  display: flex; justify-content: flex-end;
+}
+footer div.footer_menu ul li { 
+  padding: 0 10px;
+}
+footer div.footer_menu ul li:first-child ,
+footer div.footer_menu ul li:nth-child(2)
+{ 
+  padding-left: 10px; 
+  border-right: 1px solid #fff;
+}

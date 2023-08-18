@@ -1,0 +1,814 @@
+@font-face {
+	font-family: 'SUITE-Regular';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+}
+  @font-face {
+	font-family: "GmarketSansMedium";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+  }
+  
+  
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+
+
+
+/* common */
+html, body {
+	scroll-behavior: smooth;
+	margin: 0 auto;
+
+}
+  
+a {
+	cursor: pointer;
+}
+  
+header {
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 80px;
+	margin: 0 auto;
+	padding: 0 30px;
+	border-bottom: 1px #000 solid;
+	z-index: 79;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: transparent;
+}
+  header nav > ul {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  header nav > ul > li {
+	position: relative;
+	transition: all 0.3s;
+  }
+  header nav > ul > li > a {
+	color: #000;
+	padding: 33px;
+	display: flex;
+  }
+  /* header nav > ul > li .sub {
+	display: none;
+	background: #000;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+  } */
+  header nav > ul > li:hover {
+	background: rgba(0, 0, 0, 0.3);
+  }
+  
+  main {
+	overflow: hidden;
+  }
+  main .section {
+	position: relative;
+	background: url(../images/main.png) no-repeat;
+	background-size: cover;
+	width: 100vw;
+	height: 100vh;
+  }
+
+  main .section .txt h1{
+	position: absolute;
+	left: 10%;
+	top: 30%;
+  }
+
+
+main .section .txt p {
+
+	position: absolute;
+	left: 20%;
+	top: 50%;
+	font-size: 13rem;
+	line-height: 1.5;
+	color: #000; /* text-shadow: 0 0 5px rgba(0, 0, 0, 1) */
+	font-weight: 800;
+	letter-spacing: -0.05em;
+	font-family: 'Lora', serif;
+
+}
+ 
+
+  main .campaign h1 {
+	font-size: 3rem;
+	position: relative;
+	z-index: 10;
+  }
+  main .myprofile {
+	background: #fff8b9;
+	height: 100vh;
+	padding: 10vh;
+  }
+  main .myprofile h1::after {
+	content: "MY PROFILE";
+	position: absolute;
+	top: 25px;
+	left: 30px;
+	width: 100%;
+	height: 100%;
+	color: rgba(230, 92, 92, 0.6);
+	overflow: hidden;
+	z-index: 0;
+  }
+  main .myprofile .me {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 6vh;
+	align-items: center;
+  }
+
+
+  main .myprofile .me .pro_group {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+  }
+
+  
+  main .myprofile .me .pro_group div {
+	padding: 30px;
+  }
+  main .myprofile .me .pro_group div h2 {
+	font-weight: 800;
+	font-size: 1.245rem;
+	font-family: GmarketSansMedium;
+	color: #12af12;
+	margin-bottom: 2vh;
+  }
+  main .myprofile .me .pro_group div dl {
+	display: flex;
+	align-items: center;
+	margin-top: 15px;
+  }
+  main .myprofile .me .pro_group div dl dt {
+	width: 90px;
+	margin-right: 20px;
+	font-size: 1.245rem;
+	color: #28a128;
+  }
+  main .myprofile .me .pro_group div dl dd {
+	color: #2c6b2c;
+	white-space: nowrap;
+  }
+  main .myprofile .me .pro_group div dl:first-child {
+	margin-top: 0;
+  }
+  main .myprofile .me .pro_group div dl:nth-child(6) dd {
+	font-size: 1.125rem;
+	font-family: SUITE-Regular;
+	color: #2c6b2c;
+  }
+  main .myprofile .me .pro_group .profile .git {
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+	padding: 0;
+  }
+  main .myprofile .me .pro_group .profile .git a {
+	width: 32px;
+	display: inline-block;
+	position: relative;
+	z-index: 2;
+  }
+  main .myprofile .me .pro_group .profile .git a img {
+	width: 100%;
+  }
+  main .myprofile .me .pro_group .profile .git span {
+	color: #2c6b2c;
+	font-weight: 800;
+	margin-left: 10px; /* position: absolute; left: 0; top: 0; */
+	opacity: 0;
+  }
+  main .myprofile .me .pro_group .profile .git a:hover + span {
+	-webkit-animation: transX 0.5s ease both;
+			animation: transX 0.5s ease both;
+  }
+  main .myprofile .me .pro_group .skil dl dd {
+	width: 300px;
+	height: 10px;
+	background: #94db94;
+	border-radius: 15px;
+	position: relative;
+  }
+  main .myprofile .me .pro_group .skil dl:nth-child(2) dd::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 85%;
+	height: 100%;
+	background: #2c6b2c;
+	color: #000;
+	z-index: 2;
+	display: block;
+	border-radius: 15px;
+	-webkit-animation: gusip 1s ease both;
+			animation: gusip 1s ease both;
+  }
+  main .myprofile .me .pro_group .skil dl:nth-child(3) dd::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 70%;
+	height: 100%;
+	background: #2c6b2c;
+	color: #000;
+	z-index: 2;
+	display: block;
+	border-radius: 15px;
+	-webkit-animation: palsipo 1s ease both;
+			animation: palsipo 1s ease both;
+  }
+  main .myprofile .me .pro_group .skil dl:nth-child(4) dd::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40%;
+	height: 100%;
+	background: #2c6b2c;
+	color: #000;
+	z-index: 2;
+	display: block;
+	border-radius: 15px;
+	-webkit-animation: chilsip 1s ease both;
+			animation: chilsip 1s ease both;
+  }
+  main .myprofile .me .pro_group .skil dl:nth-child(5) dd::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80%;
+	height: 100%;
+	background: #2c6b2c;
+	color: #000;
+	z-index: 2;
+	display: block;
+	border-radius: 15px;
+	-webkit-animation: palsip 1s ease both;
+			animation: palsip 1s ease both;
+  }
+  main .myprofile .me .pro_group .skil dl:nth-child(6) dd::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 70%;
+	height: 100%;
+	background: #2c6b2c;
+	color: #000;
+	z-index: 2;
+	display: block;
+	border-radius: 15px;
+	-webkit-animation: gusip 1s ease both;
+			animation: gusip 1s ease both;
+  }
+  main .myprofile .me .pro_group .skil dl:nth-child(7) dd::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80%;
+	height: 100%;
+	background: #2c6b2c;
+	color: #000;
+	z-index: 2;
+	display: block;
+	border-radius: 15px;
+	-webkit-animation: palsip 1s ease both;
+			animation: palsip 1s ease both;
+  }
+
+
+
+  main .web_re {
+	height: 200vh;
+	background:#f5f5f5;
+	padding: 10vh;
+  }
+ 
+  main .web_re h1::after {
+	content: "CODING";
+	position: absolute;
+	top: 25px;
+	left: 30px;
+	width: 100%;
+	height: 100%;
+	color: rgba(255, 255, 255, 0.6);
+	overflow: hidden;
+	z-index: 0;
+  }
+  main .web_re ul {
+	display: flex;
+	flex-flow: column wrap;
+	margin-top: 17vh;
+	align-content: center;
+  }
+  main .web_re ul > li .web1 ,
+  main .web_re ul > li .web2 {
+	position: relative;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	justify-content: space-between;
+	margin-top: -15vh;
+  }
+
+	/* 화면크기수정 */
+  main .web_re ul > li .web1 > a,
+  main .web_re ul > li .web2 > a  {
+	width: 550px;
+	height: 450px;
+	display: inline-block;
+	margin-right: 50px;
+	position: absolute;
+	left: 5%;
+  }
+  main .web_re ul > li .web > a img {
+	width: 100%;
+  }
+  main .web_re ul > li .web .project_web {
+	margin-left: 200px;
+  }
+  main .web_re ul > li .web .project_web .txt h2 {
+	font-size: 1.45rem;
+	margin-bottom: 30px;
+  }
+  main .web_re ul > li .web .project_web .txt h2::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1px;
+	position: relative;
+	left: 0;
+	top: 15px;
+	background: #000;
+  }
+  main .web_re ul > li .web .project_web .txt dl {
+	display: flex;
+	margin-top: 10px;
+  }
+  main .web_re ul > li .web .project_web .txt dl dt {
+	width: 130px;
+  }
+  main .web_re ul > li .web .project_web .connect {
+	display: flex;
+	margin-top: 30px;
+  }
+
+
+
+  main .web_re ul > li .web1 {
+	position: relative;
+	z-index: 2;
+	height: 80vh;
+  }
+  main .web_re ul > li .web1 > a {
+	position: relative;
+	z-index: 2;
+  }
+  main .web_re ul > li .web1 .project_web {
+	position: relative;
+	z-index: 2;
+  }
+  main .web_re ul > li .web1 .project_web .txt h2 {
+	font-size: 1.45rem;
+	margin-bottom: 30px;
+  }
+  main .web_re ul > li .web1 .project_web .txt h2::after {
+	position: relative;
+	z-index: 2;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1px;
+	position: relative;
+	left: 0;
+	top: 15px;
+	background: #000;
+  }
+  main .web_re ul > li .web1 .project_web .txt dl {
+	display: flex;
+	margin-top: 10px;
+	position: relative;
+	z-index: 2;
+  }
+  main .web_re ul > li .web1 .project_web .txt dl dt {
+	width: 130px;
+  }
+  main .web_re ul > li .web1 .project_web .connect {
+	display: flex;
+	margin-top: 30px;
+  }
+  main .web_re ul > li .web1 .project_web .connect a {
+	margin-right: 20px;
+	padding: 10px;
+	border: #000 1px solid;
+	border-radius: 5px;
+	color: #000;
+	font-weight: 700;
+	position: relative;
+	z-index: 2;
+	box-shadow: 1px 2px 1px #000;
+	transition: all 0.3s;
+  }
+  main .web_re ul > li .web1 .project_web .connect a:hover {
+	background: #ff0000;
+	border: #ff0000 1px solid;
+	border-radius: 5px;
+	box-shadow: 1px 2px 1px #fff;
+	color: #fff;
+  }
+  main .web_re ul > li .web1::after {
+	content: "";
+	display: block;
+	width: 1920px;
+	height: 90%;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+	background:  #ffffff;
+  }
+
+
+
+  main .web_re ul > li .web2 {
+	position: relative;
+	z-index: 2;
+	height: 80vh;
+  }
+  main .web_re ul > li .web2 > a {
+	position: relative;
+	z-index: 2;
+  }
+  main .web_re ul > li .web2 .project_web {
+	position: relative;
+	z-index: 2;
+  }
+  main .web_re ul > li .web2 .project_web .txt h2 {
+	font-size: 1.45rem;
+	margin-bottom: 30px;
+  }
+  main .web_re ul > li .web2 .project_web .txt h2::after {
+	position: relative;
+	z-index: 2;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1px;
+	position: relative;
+	left: 0;
+	top: 15px;
+	background: #000;
+  }
+  main .web_re ul > li .web2 .project_web .txt dl {
+	display: flex;
+	margin-top: 10px;
+	position: relative;
+	z-index: 2;
+  }
+  main .web_re ul > li .web2 .project_web .txt dl dt {
+	width: 130px;
+  }
+  main .web_re ul > li .web2 .project_web .connect {
+	display: flex;
+	margin-top: 30px;
+  }
+  main .web_re ul > li .web2 .project_web .connect a {
+	margin-right: 20px;
+	padding: 10px;
+	border: #000 1px solid;
+	border-radius: 5px;
+	color: #000;
+	font-weight: 700;
+	position: relative;
+	z-index: 2;
+	box-shadow: 1px 2px 1px #000;
+	transition: all 0.3s;
+  }
+  main .web_re ul > li .web2 .project_web .connect a:hover {
+	background: #ff0000;
+	border: #ff0000 1px solid;
+	border-radius: 5px;
+	box-shadow: 1px 2px 1px #fff;
+	color: #fff;
+  }
+  main .web_re ul > li .web2::after {
+	content: "";
+	display: block;
+	width: 1920px;
+	height: 90%;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+	background: #ffffff;
+  }
+
+
+
+
+  
+  main .details {
+	height: 100vh;
+	padding: 10vh;
+	background: #D3D3D3;
+  }
+  main .details h1::after {
+	content: "WEB SITE DESIGN";
+	position: absolute;
+	top: 25px;
+	left: 30px;
+	width: 100%;
+	height: 100%;
+	color: rgba(255, 255, 255, 0.6);
+	z-index: 0;
+  }
+  main .details #project_view2 {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	background: rgba(0, 0, 0, 0.7);
+	width: 100%;
+	height: 100vh;
+  }
+  main .details #project_view2 .contents {
+	width: 55%;
+	margin: 50px auto;
+	position: absolute;
+	height: 97%;
+	left: 50%;
+	transform: translate(-50%, -24%);
+	top: 20%;
+	overflow-y: scroll;
+  }
+  main .details #project_view2 .contents img {
+	width: 100%;
+  }
+  main .details .d_etails {
+	display: flex;
+	justify-content: center;
+  }
+  /* main .details .d_etails a {
+	margin-left: 80px;
+	margin-top: 100px;
+	width: 400px;
+	height: 600px;
+	overflow: hidden;
+  }
+
+  main .details .d_etails a img {
+	width: 400px;
+	filter: grayscale(1) contrast(0.8);
+	transition: all 0.3s;
+  } */
+	main .details .d_etails a {
+		margin-left: 60px;
+		margin-top: 100px;
+		width: 400px;
+		height: 600px;
+		overflow: hidden;
+		}
+	
+		main .details .d_etails a img {
+		width: 400px;
+		filter: grayscale(1) contrast(0.8);
+		transition: all 0.3s;
+		}
+  main .details .d_etails a:hover img {
+	transform: scale(1.1);
+	filter: none;
+  }
+  main .details .d_etails a:first-child {
+	margin-left: 0;
+  }
+
+
+
+
+  main .sns {
+	height: 100vh;
+	padding: 10vh;
+	background: #D3D3D3;
+  }
+  main .sns h1::after {
+	content: "GRAPHIC DESIGN";
+	position: absolute;
+	top: 25px;
+	left: 30px;
+	width: 100%;
+	height: 100%;
+	color: rgba(255, 255, 255, 0.6);
+	z-index: 0;
+  }
+  main .sns #project_view {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	background: rgba(0, 0, 0, 0.7);
+	width: 100%;
+	height: 100vh;
+	cursor: pointer;
+  }
+  main .sns #project_view .contents {
+	width: 60%;
+	margin: 50px auto;
+	position: absolute;
+	height: 60%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -45%);
+	top: 33%;
+  }
+  main .sns #project_view .contents img {
+	width: 100%;
+  }
+  main .sns #project_view3 {
+	display: none;
+	overflow-y: scroll;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	background: rgba(0, 0, 0, 0.7);
+	width: 100%;
+	height: 100vh;
+	cursor: pointer;
+  }
+  main .sns #project_view3 .contents {
+	width: 60%;
+	margin: 50px auto;
+	position: absolute;
+	height: 60%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-45%, -55%);
+	top: 33%;
+  }
+  main .sns #project_view3 .contents img {
+	width: 80%;
+  }
+  main .sns .s_ns {
+	display: flex;
+	flex-flow: column wrap;
+	margin-top: 100px;
+  }
+  main .sns .s_ns .top {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  main .sns .s_ns .top a {
+	width: 830px;
+	height: 270px;
+	display: inline-block;
+	overflow: hidden;
+  }
+  main .sns .s_ns .top a img {
+	width: 100%;
+	transition: all 0.3s;
+	filter: grayscale(1) contrast(0.8);
+  }
+  main .sns .s_ns .top a:nth-child(1) {
+	margin-right: 25px;
+  }
+  main .sns .s_ns .top a:nth-child(2) {
+	margin-left: 25px;
+  }
+  main .sns .s_ns .top a:hover img {
+	transform: scale(1.1);
+	filter: none;
+  }
+  main .sns .s_ns .btm {
+	width: 100%;
+	overflow: hidden;
+	margin-top: 70px;
+	display: flex;
+	justify-content: space-between;
+  }
+  main .sns .s_ns .btm a {
+	width: 250px;
+	height: 220px;
+	overflow: hidden;
+	margin-left: 25px;
+  }
+  main .sns .s_ns .btm a img {
+	width: 100%;
+	transition: all 0.3s;
+	filter: grayscale(1) contrast(0.8);
+  }
+  main .sns .s_ns .btm a:nth-child(1) {
+	margin-left: 0;
+  }
+  main .sns .s_ns .btm a:hover img {
+	transform: scale(1.1);
+	filter: none;
+  }
+
+  /* main .contact {
+	height: 100vh;
+	padding: 10vh;
+	background: #fff8b9;
+
+  }
+  main .contact h1::after {
+	content: "CONTACT";
+	position: absolute;
+	top: 25px;
+	left: 30px;
+	width: 100%;
+	height: 100%;
+	color: rgba(230, 92, 92, 0.6);
+	z-index: 0;
+  } */
+
+
+
+ 
+	@-webkit-keyframes typing {
+	0% {width: 0%;}
+	50% {width: 100%;}
+	100% {width: 0%;}
+  }
+  
+  @keyframes typing {
+	0% {width: 0%;}
+	50% {width: 100%;}
+	100% {width: 0%;}
+  }
+  @-webkit-keyframes cursor {
+	0% {opacity: 0;}
+	50% {opacity: 1;}
+	100% {opacity: 0;}
+  }
+  @keyframes cursor {
+	0% {opacity: 0;}
+	50% {opacity: 1;}
+	100% {opacity: 0;}
+  }
+  @-webkit-keyframes gusip {
+	0% {width: 0;}
+	100% {width: 90%;}
+  }
+  @keyframes gusip {
+	0% {width: 0;}
+	100% {width: 90%;}
+  }
+  @-webkit-keyframes palsipo {
+	0% {width: 0;
+	}
+	100% {width: 85%;}
+  }
+  @keyframes palsipo {
+	0% {width: 0;}
+	100% {width: 85%;}
+  }
+  @-webkit-keyframes palsip {
+	0% {width: 0;}
+	100% {width: 80%;}
+  }
+  @keyframes palsip {
+	0% {width: 0;}
+	100% {width: 80%;}
+  }
+  @-webkit-keyframes chilsip {
+	0% {width: 0;}
+	100% {width: 70%;}
+  }
+  @keyframes chilsip {
+	0% {width: 0;}
+	100% {width: 70%;}
+  }
+  @-webkit-keyframes transX {
+	0% {transform: translateX(-30px);opacity: 0;}
+	100% {transform: translateX(0px);opacity: 1;
+	}
+  }
+  @keyframes transX {
+	0% {transform: translateX(-30px);opacity: 0;}
+	100% {transform: translateX(0px);opacity: 1;}
+  }
+
+  /* # sourceMappingURL=main.css.map */
