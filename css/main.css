@@ -74,16 +74,17 @@ header {
   }
   main .section {
 	position: relative;
-	background: url(../images/main.png) no-repeat;
+	background: url(../images/main1.png) no-repeat;
 	background-size: cover;
 	width: 100vw;
 	height: 100vh;
   }
 
-  main .section .txt h1{
+  main .section .txt h2{
 	position: absolute;
-	left: 10%;
-	top: 30%;
+	left: 20%;
+	top: 65%;
+	font-size: 28px;
   }
 
 
@@ -91,8 +92,8 @@ main .section .txt p {
 
 	position: absolute;
 	left: 20%;
-	top: 50%;
-	font-size: 13rem;
+	top: 30%;
+	font-size: 12rem;
 	line-height: 1.5;
 	color: #000; /* text-shadow: 0 0 5px rgba(0, 0, 0, 1) */
 	font-weight: 800;
@@ -108,7 +109,7 @@ main .section .txt p {
 	z-index: 10;
   }
   main .myprofile {
-	background: #fff8b9;
+	background: #fff;
 	height: 100vh;
 	padding: 10vh;
   }
@@ -119,7 +120,7 @@ main .section .txt p {
 	left: 30px;
 	width: 100%;
 	height: 100%;
-	color: rgba(230, 92, 92, 0.6);
+	color: rgba(236, 175, 247, 0.6);
 	overflow: hidden;
 	z-index: 0;
   }
@@ -298,18 +299,18 @@ main .section .txt p {
 
   main .web_re {
 	height: 200vh;
-	background:#f5f5f5;
+	background:#fff;
 	padding: 10vh;
   }
  
   main .web_re h1::after {
-	content: "CODING";
+	content: "WEB PUBLISHING";
 	position: absolute;
 	top: 25px;
 	left: 30px;
 	width: 100%;
 	height: 100%;
-	color: rgba(255, 255, 255, 0.6);
+	color: rgba(236, 175, 247, 0.6);
 	overflow: hidden;
 	z-index: 0;
   }
@@ -362,7 +363,7 @@ main .section .txt p {
   }
   main .web_re ul > li .web .project_web .txt dl {
 	display: flex;
-	margin-top: 10px;
+	margin-top: 20px;
   }
   main .web_re ul > li .web .project_web .txt dl dt {
 	width: 130px;

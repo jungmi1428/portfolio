@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -6,15 +7,15 @@
 body {
   margin: 0;
   min-width: 992px;
-  font-family: "Helvetica";
+  font-family: "HUbuntu";
 }
 ul { list-style-type: none; }
 
 /* navbar */
 .navbar{
   height: 60px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 330px;
+  padding-right: 330px;
 }
 .navbar #logo {
   line-height: 60px;
@@ -35,6 +36,7 @@ ul { list-style-type: none; }
   margin-left: 50px;
   line-height: 60px;
 }
+
 
 .navbar #menu li a {
   text-decoration: none;
@@ -83,6 +85,16 @@ ul { list-style-type: none; }
   margin-right: 10px;
   margin-bottom: 80px;
   
+}
+.product img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+}
+.product img:hover{
+  -webkit-transform: scale(1.2);
+	transform: scale(1.2);
 }
 
 .product-name{
